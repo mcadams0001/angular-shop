@@ -20,7 +20,14 @@ export class RecipeService {
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
-      ])
+      ]),
+      new Recipe('Macarons',
+        'A set of nice macarons?',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Macarons%2C_French_made_mini_cakes.JPG/220px-Macarons%2C_French_made_mini_cakes.JPG',
+        [
+          new Ingredient('Buns', 2),
+          new Ingredient('Meat', 1)
+        ])
   ];
 
   setRecipes(recipes: Recipe[]) {
