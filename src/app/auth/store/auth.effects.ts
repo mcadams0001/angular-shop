@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 @Injectable()
 export class AuthEffects {
   @Effect()
-  authSignup: Observable<Action> = this.actions$
+  authSignup = this.actions$
     .pipe(ofType(AuthActions.TRY_SIGNUP)).pipe(map((action: AuthActions.TrySignup) => {
       return action.payload;
     }))
@@ -48,7 +48,7 @@ export class AuthEffects {
       this.router.navigate(['/']);
       return [
         {
-          type: AuthActions.SIGNUP
+          type: AuthActions.SIGNIN
         },
         {
           type: AuthActions.SET_TOKEN,
